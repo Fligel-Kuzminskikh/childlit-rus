@@ -54,6 +54,7 @@ Aaсамурти|
 Антониорроблес|
 Аригапуди|
 Аткай|
+Аэл|
 Бенашвили|
 Васамурти|
 Габиба|
@@ -64,6 +65,9 @@ Aaсамурти|
 Елин-Пелин|
 Конан-Дойль|
 Кукрыниксы|
+Лабулэ|
+Леони|
+Лерхе|
 Лесник|
 Луда|
 Магомед-Расул|
@@ -103,23 +107,35 @@ Aaсамурти|
 """
 
 CITY = r"""
-Б\.\s+м\.|
+Б\.\s*м\.|
 Абакан|
 Алапаевск|
 Алма-Ата|
+Анапа|
 Архангельск|
 Астрахань|
 Ашхабад|
 Баку|
+Балаково|
+Барановичи|
 Барнаул|
 Батуми|
+Бежица|
+Белгород|
 Березники|
+Берлин|
+Биробиджан|
+Бийск|
 Бирск|
 Благовещенск|
 Бобруйск|
 Боровичи|
+Брянск|
+В\.(-|\s+)Луки|
 Великий\s+Устюг|
 Вильнюс|
+Винница|
+Витебск|
 Владивосток|
 Владимир|
 Волгоград|
@@ -127,57 +143,83 @@ CITY = r"""
 Волоколамск|
 Волочиск|
 Воронеж|
+Ворошиловград|
 Ворошиловск|
 Выкса|
 Вятка|
 г\.\sСлободской|
+Геленджик|
 Гомель|
 Горно-Алтайск|
 Горький|
 Гродно|
 Грозный|
+Гурьев|
 Дзауджикау|
 Днепропетровск|
 Донецк|
 Душанбе|
 Екатеринбург|
+Екатеринослав|
+Елец|
 Ереван|
 Загорск|
+Запорожье|
 Зарайск|
 Зея|
+Златоуст|
 Ив\.-Вознесенск|
+Иваново-Вознесенск|
 Иваново|
 Ижевск|
 Ирбит|
 Иркутск|
-Ихинвали|
 Йошкар-Ола|
 Казань|
-Калинин|
+Калинин(?!град)|
 Калининград|
 Калуга|
 Камень|
+Камышин|
+Караганда|
 Каунас|
+Кашира|
 Кемерово|
+Кзыл-Орда|
 Ки[еi]в|
-Киров|
+Киров(?!оград)|
+Кировоград|
+Кисловодск|
 Кишинев|
+Клин|
 Кострома|
 Краснодар|
 Красноярск|
 Кременчуг|
+Крым|
+Кудымкар|
 Куйбышев|
+Кунгур|
 Курган|
 Курск|
 Кызыл|
 Л\.|
 Ленинград|
+Липецк|
+Лодейное\s+[Пп]оле|
+Луга(?!нск)|
+Луганск|
+Луцк|
+Львов|
 М\.|
 Магадан|
 Майкоп|
 Махачкала|
 Минск|
+Минусинск|
 Мичуринск|
+Могил[её]в|
+Молодечно|
 Молотов|
 Москва|
 Мурманск|
@@ -185,34 +227,47 @@ CITY = r"""
 Мытищи|
 Н\.-Новгород|
 Нальчик|
+Нижний-Ломов\s+[(]Пензенск\.\s+губ\.[)]|
+Николаев|
 Новгород|
+Ново-Николаевск|
+Новокузнецк|
 Новониколаевск|
+Новороссийск|
+Ново-Сибирск|
 Новосибирск|
+Новочеркасск|
 Нукус|
 Одесса|
 Омск|
-Орджоникидзе|
+Орджоникидзе(?!град)|
 Орджоникидзеград|
 Орел|
 Оренбург|
+Ош|
+Павлодар|
 Пг?\.|
 Пенза|
 Пермь|
 Петрозаводск|
 Петропавловск-Камчатский|
 Покровск|
+Полтава|
 Псков|
 Пучеж|
 Пятигорск|
 Рига|
+Ржев|
 Ростов-Дон|
 Ростов-Ярославск([.]|ий)|
 Ростов-на-Дону|
-Ростов\s+н/Д|
+Ростов\s+н/Д\.?|
 Ростов|
+Рыбинск|
 Рязань|
 С\.\s+Гаютино|
 С\.\s+Нюксеница|
+С?ПБ\.|
 Самара|
 Самарканд|
 Саранск|
@@ -220,44 +275,66 @@ CITY = r"""
 Свердловск|
 Севастополь|
 Село\s+Атмис\s+[(]Н\.-Ломовского\s+уезда,\s+Пензенск\.\s+губ\.[)]|
+Семипалатинск|
 Сергиев|
 Серпухов|
 Симферополь|
 Смоленск|
+Сочи|
 Ст\.\s+Тимошевская|
-Ставрополь|
+Ставрополье?|
 Сталинабад|
 Сталинград|
 Сталинир|
 Сталино|
+Станислав|
 Сухуми?|
+Сызрань|
 Сыктывкар|
+Таганрог|
 Таллин|
+Тамбов|
 Ташкент|
 Тбилиси|
+Тверь|
+Темир-Тау|
 Тифлис|
+Тобольск|
 Томск|
 Тула|
 Тюмень|
+Ужгород|
 Улан-Удэ|
 Ульяновск|
 Уральск|
+Усть-Каменогорск|
 Уфа|
 Фергана|
 Фрунзе|
 Хабаровск|
 Харьк[оi]в|
+Херсон|
+Целиноград|
+Цхинвали|
 Чебоксары|
 Челябинск|
+Череповец|
+Черкассы|
+Черкесск|
 Чернигов|
 Черновицы|
+Черновцы|
+Чимкент|
 Чита|
 Чкалов|
 Шадринск|
 Шахты|
+Щербаков|
 Элиста|
+Юж\.-Уральск|
 Ю(ж?\.|жно)[-\s]Сахалинск|
 Якутск|
+Ялта|
 Ярославль
 """
 
@@ -307,7 +384,7 @@ class BibItem(object):
             self.num = 0
             self.suffix = 0
         else:
-            m = re.match(r"(?<num>[1-9][0-9]*)(?<suffix>[aаб])?$", string)
+            m = re.match(r"(?<num>[1-9][0-9]*)(-?(?<suffix>[aаб]))?$", string)
             suffixdict = {None: 0, 'a': 1, 'а': 1, 'б': 2}
             try:
                 self.num = int(m.group('num'))
@@ -339,9 +416,9 @@ class BibItem(object):
             return self.value > other.value
 
     def __add__(self, other):
-        if isinstance(other, int):
+       if isinstance(other, int):
             return self.num + self.suffix + other
-        else:
+       else:
             return self.num + other.num + self.suffix + other.suffix
 
     def __sub__(self, other):
@@ -358,7 +435,8 @@ class Record(dict):
         self.start = start
         self.end = end
         self.fields = ['start', 'end', 'num', 'author', 'title',
-                       'city', 'publisher', 'year', 'tail']
+                       'city', 'publisher', 'year', 'series',
+                       'pages', 'printrun', 'price', 'bibaddon', 'tail']
 
     def serialize(self):
         out = {}
@@ -374,7 +452,7 @@ def extract_number(line):
     Return a tuple with a number and a text line. If a line doesn't have the
     number return zero and full line as output.
     """
-    num = re.match(r'\s*(?<num>[1-9][0-9]*[aаб]?)\.\s+(?<tail>.+)', line)
+    num = re.match(r'\s*(?<num>[1-9][0-9]*-?[aаб]?)\.\s+(?<tail>.+)', line)
     if num:
         return (num.group('num'), num.group('tail'))
     else:
@@ -488,19 +566,19 @@ or indicate that it is missing with the NOAUTHOR tag. Inconsistencies
 are marked with ERRAUTHOR tag.
     """
     fmtr = ExtendedFormatter()   
-    one_author = re.compile(AUTHOR_NAME + r"([[\W\s]--[,«]]+|\s+@[[\W\s]--[«]]+)(?<tail>.*)$", re.U | re.VERBOSE | re.V1)
+    one_author = re.compile(AUTHOR_NAME + r"\.?(?(?=\s*\.\.\.)\s*(?<tail>.*)|([[\W\s]--[,«]]+|\s+@[[\W\s]--[«]]+)(?<tail>.*))$", re.U | re.VERBOSE | re.V1)
     dash = re.compile(r"^[\W\s]*[—][\W\s]*(?<tail>.*)$", re.U)
     multi_author = re.compile(r'(?<all>' + AUTHOR_NAME +
                               r'((\s+и\s+|,\s+)' + AUTHOR_NAME + r')+' +
-                              r')[\W\s]+(?<tail>.*)$', re.U | re.VERBOSE)
+                              r')(?(?=\s+\.\.\.)\s*(?<tail>.*)|[\W\s]+(?<tail>.*))$', re.U | re.VERBOSE)
     single_name_authors = re.compile(r"(?<last>" + SINGLE_AUTHORS +
-                                     r")[\W\s]+(?<tail>.*)$", re.U | re.VERBOSE )
+                                     r")(?(?=\s+\.\.\.)\s*(?<tail>.*)|[\W\s]+(?<tail>.*))$", re.U | re.VERBOSE )
     and_others = re.compile(AUTHOR_NAME +
                             r"\s+и\s+др\.\s+(?<tail>(?<head>[^/]+)" +
                             r"(/\s*(?<others>(" + INI_AUTHOR + r"[,;.]\s+)+))?.*)$",
                             re.U | re.VERBOSE)
-    noauthor_tag = re.compile(r"^\s*@NOAUTHOR@[[\W\s]--[«]]+(?<tail>.*)$", re.V1)
-    author_tag = re.compile(r"^\s*@AUTHOR:(?<all>[^@]+)@[[\W\s]--[«]]+(?<tail>.*)$", re.V1)
+    noauthor_tag = re.compile(r"^\s*@NOAUTHOR@(?(?=\s+\.\.\.)\s*(?<tail>.*)|[[\W\s]--[«]]+(?<tail>.*))$", re.V1)
+    author_tag = re.compile(r"^\s*@AUTHOR:(?<all>[^@]+)@(?(?=\s+\.\.\.)\s*(?<tail>.*)|[[\W\s]--[«]]+(?<tail>.*))$", re.V1)
     hasone = one_author.match(rec.tail)
     hasdash = dash.match(rec.tail)
     hasmulti = multi_author.match(rec.tail)
@@ -568,21 +646,26 @@ def extract_title(rec, prev=None, verbose=False):
         break_at_city = re.compile(r'(?<alltitle>[^@]+\s+)@\s*' +
                                    INFO, re.U | re.VERBOSE)
     else:
-        break_at_city = re.compile(r'(?<alltitle>[\p{Lu}\d«(].+?[,.)?!—-])\s*'
+        break_at_city = re.compile(r'(?<alltitle>([\p{Lu}\d«(i№]|\.\.\.).+?[,.)?!—-])\s*'
                    + INFO, re.U | re.VERBOSE )
-    the_same = re.compile(r'(?<alltitle>Т\s*о\s*ж\s*е\s*[.,])((?<addon>.+?)?(\s*—\s*)?(?<year>19[1-8][0-9]|[Бб]\.\s+г\.))?(?<tail>.*)$', re.U | re.VERBOSE)
-    ref = re.compile(r'(?<alltitle>.+)\s+См\.\s*(?<ref>[1-9][0-9]{0,4})\.$')
+    the_same = re.compile(r'(?<alltitle>Т\s*о\s*ж\s*е\s*[.,])(?<remainder>((?<addon>[^@]+?)?(\s*—\s*)?(?<year>19[1-8][0-9]|[Бб]\.\s+г\.))?(?<tail>.*))$', re.U | re.VERBOSE)
+    ref = re.compile(r'(?<alltitle>.+)\s+[(]?См\.\s*№?\s*(?<ref>[1-9][0-9]{0,4})\s*[)]?\.?$')
     hascity = break_at_city.match(rec.tail)
     is_the_same = the_same.match(rec.tail)
     is_ref = ref.match(rec.tail)
     if is_the_same:
-        the_same_hascity = break_at_city.match(is_the_same.group('tail').strip())
+        the_same_hascity = break_at_city.match(is_the_same.group('remainder').strip())
         rec['maintitle'] = prev['maintitle']
+        if verbose:
+            print("is_the_same", is_the_same.groupdict())
+            print("hascity", hascity.groupdict())
         if hascity and is_the_same.group('alltitle') == hascity.group('alltitle'):
             is_breakable = hascity
         else:
             is_breakable = the_same_hascity
         if is_breakable:
+            if verbose:
+                print("is_breakable:", is_breakable.groupdict())
             rec['city'] = format_multi_cities(is_breakable.group('city'))
             rec['publisher'] = is_breakable.group('publisher').strip(' .,')
             rec['year'] = is_breakable.group('year')
@@ -593,6 +676,8 @@ def extract_title(rec, prev=None, verbose=False):
                 pass
             rec.tail = is_breakable.group('tail')
         else:
+            if verbose:
+                print("is_breakable FALSE", is_the_same.groupdict())
             rec['city'] = prev['city']
             rec['publisher'] = prev['publisher']
             if is_the_same.group('year'):
@@ -626,6 +711,91 @@ def extract_title(rec, prev=None, verbose=False):
         rec['year'] = ''
     if 'title' not in rec:
         rec['title'] = rec['maintitle']
+    try:
+        rec['year'] = int(rec['year'])
+    except ValueError:
+        rec['year'] = 'NA'
+    return rec
+
+
+def normalize_printrun(pr, part):
+    if pr:
+        pr = pr.replace(' ', '')
+        pr = pr.replace('О', '0')
+        pr = pr.replace('о', '0')
+        pr = pr.strip()
+    # if part:
+    #     pr = '%s [%s]' % (pr, part)
+        try:
+            return int(pr)
+        except ValueError:
+            print("INVALID PRINTRUN VALUE: ", str(pr))
+    return pr
+
+
+def normalize_price(match):
+    rub = match.group('rub') or 0
+    kop = match.group('kop') or 0
+    try:
+        price = float('%d.%d' % (int(rub), int(kop)))
+    except ValueError:
+        price = 0
+    if price > 0:
+        return price
+    else:
+        return None
+
+
+def extract_printinfo(rec, verbose=False):
+    PAGES = r'(С[тг]р\.?\s+(?<pages>[0-9]+)(?<pagecomment>(\s+и)?\s+[0-9]+\s+л[.]\s+(черт|илл))?[,.]|(?<pages>[0-9]+)\s+лист(ов|а)?[.,])'
+    PRINTRUN = r'(\s*[Тт][.]\s*(?<printrun>[1-9][0-9 Оо]+)[,.]?(\s*[(]((?<part>[0-9]+[ —-]+[0-9]+)\s+т(ыс)?\.|[1-9].+?завод.?(\s+.+?[0-9]+\s+т\.)?)[)]\.?)?)'
+    PRICE = r'(\s*[Цц][.]\s+(?<price>((?<rub>[0-9]+)\s+[рР]\.)(\s*((?<kop>[0-9]+)\s+[кК]\.))?|((?<kop>[0-9]+)\s+[кК]\.)))'
+    SERIES = r'(\s*[(](?<series>\p{Lu}[^)]+?)\.?[)]\s*)'
+    PR_EARLY = r'(' + SERIES + PAGES + PRINTRUN + '?' + PRICE + '?' + '|' + PAGES + SERIES + '?' + PRINTRUN + '?' + PRICE + '?' + '|' + PRINTRUN + PRICE + '?' + '|' + PRICE + ')'
+    pr_1918 = re.compile(r'(?<head>.*?)' + PR_EARLY + r'(?<tail>.*)$', re.U)
+    has_early = pr_1918.match(rec.tail)
+    N_PAGES = r'(?<pages>[0-9]+)\s+([Сс]тр|л|с)[.,](?<pagecomment>((,\s+|\s+и)?.+?(вклейки|иллюстр|чертежей|черт|илл|таблицы|нот|портр|[0-9]+\s+л[.]\s+ил|слож\.\s+в\s+[0-9]+\s+с)\.|\s*[(](\p{Ll}|[0-9])[^)]+[)])\.?)?(\s*[—-]+\s*)?'
+    N_PRINTRUN = r'(\s*(?<printrun>[1-9][0-9 Оо]+)(\s*[(]((?<part>[0-9]+[ —-]+[0-9]+)\s+т(ыс)?\.|[1-9]-й\s+завод\s+(?<part>[0-9]+([ —-]+[0-9]+)?)?(\s+т(ыс)?\.)?)[)]\.?)?\s*[Ээ]кз[.,]|\s*(?<printrun>[1-9][0-9 Оо]+)\s*[(](?<part>[0-9]+[ —-]+[0-9]+)\s+тыс\.\s+[Ээ]кз[.,][)])'
+    N_PRICE = r'(\s*(?<price>((?<rub>[0-9]+)\s+[рР]\.)(\s*((?<kop>[0-9]+)\s+[кК][.,]))?|((?<kop>[0-9]+)\s+[кК][.,])|Б/ц\.|Б\.\s+ц\.))'
+    N_SERIES = r'(\s+[(](?<series>\p{Lu}[^)]+)[)]\.?(\s*—\s*(?<dop>[^—]+—\s*)?)?|\s+—(?<dop>[^—]+)—\s*)'
+    PR_LATE = r'(' + N_PAGES + N_SERIES + '?' + N_PRICE + N_PRINTRUN + '|' + '—\s*' + N_SERIES + '?' + N_PRICE + N_PRINTRUN + '|' + N_PAGES + SERIES + '?' + '(' + PRINTRUN + '|' + N_PRINTRUN + ')?' + N_PRICE + '?' + '|' + '(' + PRINTRUN + '|' + N_PRINTRUN + ')' + N_PRICE + '?' + '|' + N_PRICE + '|' + N_PRINTRUN + ')'
+    pr_1946 = re.compile(r'(?<head>.*?)' + PR_LATE + r'(?<tail>.*)$', re.U)
+    has_late = pr_1946.match(rec.tail)
+    try:
+        n_early = len(list(filter(None, has_early.groups())))
+    except AttributeError:
+        n_early = 0
+    try:
+        n_late = len(list(filter(None, has_late.groups())))
+    except AttributeError:
+        n_late = 0
+    if n_early > n_late:
+        more_early = True
+    else:
+        more_early = False
+    if has_early and more_early:
+        if verbose:
+            print("has_early:", has_early.groupdict())
+        rec['pages'] = has_early.group('pages') or 'NOPAGES'
+        rec['printrun'] = normalize_printrun(has_early.group('printrun'), has_early.group('part')) or 'NOPRINTRUN'
+        rec['price'] = normalize_price(has_early) or 'NOPRICE'
+        rec['series'] = has_early.group('series') or 'NOSERIES'
+        rec.tail = ' '.join([has_early.group('head'), has_early.group('tail')])
+    elif has_late:
+        if verbose:
+            print("has_late:", has_late.groupdict())
+        rec['pages'] = has_late.group('pages') or 'NOPAGES'
+        rec['printrun'] = normalize_printrun(has_late.group('printrun'), has_late.group('part')) or 'NOPRINTRUN'
+        rec['price'] = normalize_price(has_late) or 'NOPRICE'
+        rec['series'] = has_late.group('series') or 'NOSERIES'
+        rec['bibaddon'] = has_late.group('dop') or ''
+        rec.tail = ' '.join([has_late.group('head'), has_late.group('tail')])        
+    else:
+        rec['pages'] = 'NOPAGES'
+        rec['printrun'] = 'NOPRINTRUN'
+        rec['price'] = 'NOPRICE'
+        rec['series'] = 'NOSERIES'
+        rec['bibaddon'] = ''
     return rec
 
 
@@ -656,6 +826,7 @@ def main():
         author = row['author']
         row = extract_title(row, titlerec, verbose=args.verbose)
         titlerec = row
+        row = extract_printinfo(row, verbose=args.verbose)
         csv_writer.writerow(row.serialize())
 
 
